@@ -1,0 +1,136 @@
+.card-container {
+    display: flex;
+    margin-top: 50px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .editor-panel {
+        background-color: white;
+        width: 60%;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        align-items: stretch;
+        flex-wrap: wrap;
+
+        .editor-group {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ddd;
+            font-size: 20px;
+            padding: 0px 5px;
+            height: 30px;
+            border-radius: 50px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+
+            select {
+                border: none;
+                outline: none;
+                width: 80px;
+            }
+
+            .icon {
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+        }
+
+        .btn {
+            background-color: transparent;
+            color: #000;
+            font-size: 20px;
+            padding: 0px;
+            border: 1px solid #ddd;
+            width: 30px;
+            height: 30px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        .icon-sub {
+            position: relative;
+            font-size: 15px;
+            bottom: -2px;
+        }
+
+        .icon-sup {
+            position: relative;
+            font-size: 15px;
+            top: -5px;
+        }
+    }
+
+    .card {
+        width: 60%;
+        margin: auto;
+        border-radius: 3px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        padding: 10px;
+
+        .card-header {
+            padding: 5px 20px;
+            display: flex;
+            justify-content: space-between;
+
+            .logo {
+                width: 100px;
+
+                .image {
+                    width: 100%;
+                    min-width: 100%;
+                    max-width: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            .social-panel {
+                display: flex;
+                align-items: center;
+                align-content: center;
+                justify-content: center;
+                padding: 10px;
+
+                .icon {
+                    font-size: 20px;
+                    margin: 5px;
+                }
+            }
+        }
+
+        .card-body {
+            padding: 30px 20px;
+            font-size: 30px;
+            border: none;
+            outline: none;
+            font-family: 'Noto Naskh Arabic', serif;
+        }
+
+        .card-footer {
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .icon {
+                margin-right: 10px;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .card-dark {
+        background-color: #000;
+        color: white !important;
+    }
+
+    .card-light {
+        background-color: #023134;
+        color: #fff !important;
+    }
+}

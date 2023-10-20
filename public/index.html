@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/logo-dark.png') }}" type="image/png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styleshteet.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='icons/boxicons/css/boxicons.min.css') }}">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="left-col">
+            <h2 class="heading"><b>Khilafat360</b></h2>
+            <p class="description">Create your post template</p>
+        </div>
+    </header>
+
+    <button class="btn left-btn" id="downloadBtn"><span class="bx bx-download icon"></span>Download</button>
+
+    <section class="right-btn">
+        <button class="btn" id="light-theme">Light</button>
+        <button class="btn" id="dark-theme">Dark</button>
+    </section>
+
+
+    <!-- Content -->
+    <main class="card-container" id="template">
+        <div class="editor-panel">
+            <div class="editor-group">
+                <b for="fontFamily" class="bx bx-font-family icon"></b>
+                <select name="fontFamily" id="fontFamily">
+                    <option value="">Select</option>
+                    <option value="Arial">Arial</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Roboto">Roboto</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <option value="Trebuchet MS">Trebuchet MS</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Garamond">Garamond</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Brush Script MT">Brush Script MT</option>
+                </select>
+            </div>
+            <div class="editor-group">
+                <b for="headings" class="bx bx-heading icon"></b>
+                <select name="headings" id="headings">
+                    <option value="">Select</option>
+                    <option value="h1">Heading 1</option>
+                    <option value="h2">Heading 2</option>
+                    <option value="h3">Heading 3</option>
+                    <option value="h4">Heading 4</option>
+                    <option value="h5">Heading 5</option>
+                    <option value="h6">Heading 6</option>
+                    <option value="p">Paragraph</option>
+                </select>
+            </div>
+            <div class="editor-group">
+                <b for="alignment" class="bx bx-align-left icon"></b>
+                <select name="alignment" id="alignment">
+                    <option value="">Select</option>
+                    <option value="left">Left</option>
+                    <option value="right">Right</option>
+                    <option value="center">Center</option>
+                    <option value="justify">Justify</option>
+                </select>
+            </div>
+            <div class="editor-group">
+                <b for="format" class="bx bx-bold icon"></b>
+                <select name="format" id="format">
+                    <option value="">Select</option>
+                    <optgroup label="Text formating">
+                        <option value="bold">Bold</option>
+                        <option value="italic">Italic</option>
+                        <option value="underline">Underline</option>
+                        <option value="strikethrough">Strike-through</option>
+                        <option value="subscript">Subscript</option>
+                        <option value="superscript">Super script</option>
+                    </optgroup>
+                    <optgroup label="Indentation">
+                        <option value="indent">Indent</option>
+                        <option value="outdent">Outdent</option>
+                    </optgroup>
+                    <optgroup label="Line break">
+                        <option value="hr">Divider</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="editor-group">
+                <b for="listing" class="bx bx-list-check icon"></b>
+                <select name="listing" id="listing">
+                    <option value="">Select</option>
+                    <option value="ol">Ordered list</option>
+                    <option value="ul">Unordered list</option>
+                </select>
+            </div>
+            <div class="editor-group">
+                <b for="fontSize" class="bx bx-font-size icon"></b>
+                <select name="fontSize" id="fontSize">
+                    <option value="">Select</option>
+                    <option value="10">10px</option>
+                    <option value="12">12px</option>
+                    <option value="14">14px</option>
+                    <option value="16">16px</option>
+                    <option value="18">18px</option>
+                    <option value="20">20px</option>
+                    <option value="22">22px</option>
+                    <option value="24">24px</option>
+                    <option value="26">26px</option>
+                    <option value="28">28px</option>
+                    <option value="30">30px</option>
+                    <option value="32">32px</option>
+                    <option value="34">34px</option>
+                    <option value="36">36px</option>
+                </select>
+            </div>
+            <div class="editor-group">
+                <b for="emojis" class="bx bx-happy icon"></b>
+                <select name="emojis" id="emojis">
+                    <option value="">Select</option>
+                    <option value="&#128512;">&#128512;</option>
+                    <option value="&#128513;">&#128513;</option>
+                    <option value="&#128514;">&#128514;</option>
+                    <option value="&#128515;">&#128515;</option>
+                    <option value="&#128516;">&#128516;</option>
+                    <option value="&#128517;">&#128517;</option>
+                    <option value="&#128518;">&#128518;</option>
+                    <option value="&#128519;">&#128519;</option>
+                    <option value="&#128520;">&#128520;</option>
+                    <option value="&#128521;">&#128521;</option>
+        
+                </select>
+            </div>
+            <button class="bx bx-brush icon btn editor-btn" data-type="removeFormat"></button>
+            <button class="bx bx-cut icon btn editor-btn" data-type="cut"></button>
+            <button class="bx bx-copy icon btn editor-btn" data-type="copy"></button>
+            <button class="bx bx-paste icon btn editor-btn" data-type="paste"></button>
+            <button class="bx bx-x icon btn editor-btn" data-type="delete"></button>
+            <button class="bx bx-undo icon btn editor-btn" data-type="undo"></button>
+            <button class="bx bx-redo icon btn editor-btn" data-type="redo"></button>
+
+
+
+        </div>
+        <input id="selectedText" type="hidden">
+        <section class="card card-light" id="card">
+            <div class="card-header">
+                <div class="logo"><img src="./src/images/logo-light.png" id="logo" class="image" alt="Logo"></div>
+                <div class="social-panel">
+                    <span class="bx bxl-facebook icon"></span>
+                    <span class="bx bxl-instagram icon"></span>
+                    <span class="bx bxl-twitter icon"></span>
+                    <span class="bx bxl-linkedin icon"></span>
+                </div>
+            </div>
+            <div class="card-body" id="templateText" contenteditable="true">
+                What I'm trying to accomplish is allow the user to save text that they've selected (highlighted) on the
+                page with their cursor.
+            </div>
+            <div class="card-footer"><span class="icon bx bx-globe"></span> www.khilafat360.com</div>
+        </section>
+    </main>
+    <!-- Content -->
+
+
+
+
+    <!-- Libs -->
+    <script src="{{ url_for('static', filename='libs/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='libs/html2canvas/html2canvas.min2.js') }}"></script>
+    <!-- Custom -->
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/editor.js') }}"></script>
+
+</body>
+
+</html>
